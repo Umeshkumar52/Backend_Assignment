@@ -8,12 +8,12 @@ import randomGenRoutes from './routers/randomGenRoutes.js'
 import basicServerRoutes from './routers/basicServerRoutes.js'
 import bodyParser from 'body-parser';
 import cookieparser from 'cookie-parser';
-const PORT=3000;
-dotenv.config()
-const app=express()
-app.use(express.json())
+const PORT=5000;
+dotenv.config();
+const app=express();
+app.use(express.json());
 app.use(bodyParser.json());
-app.use(express.urlencoded({ extended:true}))
+app.use(express.urlencoded({ extended:true}));
 app.use(cookieparser())
 app.use("/api/user",userRoutes)
 app.use("/api/instaUser",instaUsersRoutes)
